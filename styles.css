@@ -3,7 +3,16 @@
     padding: 0%;
 }
 
-#background::before {
+#background { /*centralizar a página*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+#background::before { /*imagem de fundo equipe Fluxo*/
     content: "";
     position: absolute;
     inset: 0;
@@ -15,26 +24,116 @@
     z-index: -1;
 }
 
-#titulo {
-    color: orange;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: x-large;
+#titulo img{ 
+    position: absolute;
+    width: 250px;
+    height: auto;
     margin: 30px;
 }
 
-#login {
-    background-color: rgba(0, 0, 0, 0.7);
+#formulario {
+
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    padding: 30px;
+    padding: 40px;
     width: 300px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    position: relative;
+    gap: 10px;
+
+}
+
+h2 {
+    font-family: arial;
+    margin-bottom: 20px;
+}
+
+#login input {
+    width: 250px;
+    padding: 10px;
+    margin: 8px;
+    background: #333;
+    border: 1px solid;
+    color: #5c5c5c;
+}
+
+#acesso {
+    width: 100%;
+    background-color: #F47C2C;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    margin: 12px 0;
+}
+
+h4 {
+    color: #5c5c5c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: arial;
+    margin: 10px;
+}
+
+#codigo {
+    width: 100%;
+    padding: 5px;
+    background: #666;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 10 px;
+}
+
+#senha {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    font-family: Georgia;
+    text-decoration: none;
+}
+
+#novo {
+    color: #5c5c5c;
+    font-family: Georgia;
+}
+
+#assinar {
+    color: white;
+    margin: 10px 0;
+    text-decoration: none;
 }
 
 footer {
+    display: flex;
+    justify-content: space-between;
     background-color: black;
-    color: #ccc;
-    padding: 20px;
+    color: #5c5c5c;
+    padding: 30px;
+}
+
+.coluna { 
+  flex: 1;
+  width: 150px;
+}
+
+.coluna a {
+  display: block;
+  margin: 20px 0;
+}
+
+.link { /*links do rodape*/
+    color: #5c5c5c;
+    text-decoration: underline;
+    font-family: Arial;
+    font-size: small;
+}
+
+#idioma{ /*caixa de idiomas*/
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
